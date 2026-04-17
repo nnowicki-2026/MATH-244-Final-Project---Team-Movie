@@ -1,4 +1,4 @@
-# # #MATH-244-Final-Project---Team-Movie
+MATH-244-Final-Project---Team-Movie
 # Exploratory Data Analysis
 
 Research Question: What factors contribute to a successful movie?
