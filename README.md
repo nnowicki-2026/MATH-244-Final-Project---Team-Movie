@@ -12,5 +12,7 @@ The explanatory variables will be TheatersOpenWeek, OpeningWeekend, BOAvgOpenWee
 
 We performed the beginning of our data wrangling in Excel. First we had to make sure that all the variables that were in units of money were in millions of dollars, BOAvgOpenWeekend was in thousands so we had to create a new column in the data set where it was in millions. After we added that new column we went through the data to delete the observations where one of our exploratory or outcome variables were missing. For the visualization and analysis we wanted to perform we decided we were not going to use the LeadStudio or Story variables, so even though some of our rows are missing values under those columns we did not delete them because they had values for the variables we were testing. The majority of the observations that were excluded from our data were missing a Genre, which we intend to perform clustering on, so we excluded the missing values so that the movies included in our supervised analysis are the same as the ones included in our unsupervised clustering analysis. Other observations that were excluded did not have a value for one of the Gross columns or did not have a profitability amount, and those variables are key to our analysis. 
 
+# Codebook
 
+# Data Visualization
 
