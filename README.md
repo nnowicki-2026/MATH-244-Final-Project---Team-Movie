@@ -8,6 +8,30 @@ Our outcome variable is going to be Profitability and WorldGross. High profitabi
 
 The explanatory variables will be TheatersOpenWeek, OpeningWeekend, BOAvgOpenWeekend, and Budget. TheatersOpenWeek measures how many theaters showed the movie during the open weekend. OpeningWeekend measures the performance of the movie in the first weekend. BOAvgOpenWeekend measures the average revenue per theater during the open weekend. 
 
+# Table of Summary Statistics
+
+
+| Variable | Minimum | Median | Mean | Maximum |
+| :---- | :---- | :---- | :---- | :---- |
+| Movie |  |  |  |  |
+| LeadStudio |  |  |  |  |
+| Rotten Tomatoes | 0 | 48 | 49.55 | 99 |
+| AudienceScore | 19 | 61 | 60.68 | 96 |
+| Story |  |  |  |  |
+| Genre |  |  |  |  |
+| Theaters OpenWeek | 2 | 2875 | 2729 | 4468 |
+| Opening Weekend | 0.032 | 14.8 | 23.184 | 174.14 |
+| BOAvg Weekend | 151 | 5947 | 8134 | 93230 |
+| Domestic Gross | 0.36 | 44.67 | 74.91 | 760.5 |
+| ForeignGross | 0.01 | 46.93 | 99.96 | 2021 |
+| WorldGross | 1.52 | 91.4 | 174.74 | 2781.5 |
+| Budget | 0.5 | 39 | 57.57 | 300 |
+| Profitability | 15.25 | 254.32 | 371.73 | 6694.4 |
+| OpenProfit | 0.34 | 36.9 | 59.65 | 1368 |
+| Year | 2007 | 2009 | 2009 | 2013 |
+| BOAvg Weekend(M) | 0.0001504 | 0.0059195 | 0.0081153 | 0.0925000 |
+
+
 # Data Wrangling and Transformation
 
 We performed the beginning of our data wrangling in Excel. First we had to make sure that all the variables that were in units of money were in millions of dollars, BOAvgOpenWeekend was in thousands so we had to create a new column in the data set where it was in millions. After we added that new column we went through the data to delete the observations where one of our exploratory or outcome variables were missing. For the visualization and analysis we wanted to perform we decided we were not going to use the LeadStudio or Story variables, so even though some of our rows are missing values under those columns we did not delete them because they had values for the variables we were testing. The majority of the observations that were excluded from our data were missing a Genre, which we intend to perform clustering on, so we excluded the missing values so that the movies included in our supervised analysis are the same as the ones included in our unsupervised clustering analysis. Other observations that were excluded did not have a value for one of the Gross columns or did not have a profitability amount, and those variables are key to our analysis. 
@@ -34,30 +58,6 @@ We performed the beginning of our data wrangling in Excel. First we had to make 
 | OpenProfit | Profit earned only during the opening weekend | Millions |
 | Year | The year when the movie is produced | 2007 \- 2013 |
 | BOAvgWeekend(M) | The modified version for BOAvgWeekend, changing the units from dollars to millions | Millions |
-
-
-# Table of Summary Statistics
-
-
-| Variable | Minimum | Median | Mean | Maximum |
-| :---- | :---- | :---- | :---- | :---- |
-| Movie |  |  |  |  |
-| LeadStudio |  |  |  |  |
-| Rotten Tomatoes | 0 | 48 | 49.55 | 99 |
-| AudienceScore | 19 | 61 | 60.68 | 96 |
-| Story |  |  |  |  |
-| Genre |  |  |  |  |
-| Theaters OpenWeek | 2 | 2875 | 2729 | 4468 |
-| Opening Weekend | 0.032 | 14.8 | 23.184 | 174.14 |
-| BOAvg Weekend | 151 | 5947 | 8134 | 93230 |
-| Domestic Gross | 0.36 | 44.67 | 74.91 | 760.5 |
-| ForeignGross | 0.01 | 46.93 | 99.96 | 2021 |
-| WorldGross | 1.52 | 91.4 | 174.74 | 2781.5 |
-| Budget | 0.5 | 39 | 57.57 | 300 |
-| Profitability | 15.25 | 254.32 | 371.73 | 6694.4 |
-| OpenProfit | 0.34 | 36.9 | 59.65 | 1368 |
-| Year | 2007 | 2009 | 2009 | 2013 |
-| BOAvg Weekend(M) | 0.0001504 | 0.0059195 | 0.0081153 | 0.0925000 |
 
 
 
