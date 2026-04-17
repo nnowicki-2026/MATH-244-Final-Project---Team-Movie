@@ -19,20 +19,20 @@ We performed the beginning of our data wrangling in Excel. First we had to make 
 | :---- | :---- | :---- |
 | Movie | Movie name |  |
 | LeadStudio | Movie production company name |  |
-| RottenTomatoes | The Rotten Tomatoes website's ratings of movies |  |
-| AudienceScore | Scoring for the movie by the audience |  |
+| RottenTomatoes | The Rotten Tomatoes critics’ website ratings of movies | Percent |
+| AudienceScore | Scoring for the movie by the audience | Percent |
 | Story | The type of story the movie is about  |  |
 | Genre | Movie categories |  |
-| TheatersOpenWeek | Count of the number of theaters showing the movie for the open week | Counts of the weeks |
+| TheatersOpenWeek | Count of the number of theaters showing the movie for the open week | Count |
 | OpeningWeekend | Total box office revenue earned during the opening weekend | Millions |
 | BOAvgWeekend | The average box office revenue per theater during the opening weekend | Dollars |
-| DomesticGross | Revenues made in domestic regions | Millions |
-| ForeignGross | Revenues made in foreign regions | Millions |
-| WorldGross | The total revenue | Millions |
+| DomesticGross | The amount of money the movie gross in the United States | Millions |
+| ForeignGross | The amount of money the movie gross outside the United States | Millions |
+| WorldGross | The amount of money the movie gross worldwide | Millions |
 | Budget | Amount of money spent on movie production | Millions |
 | Profitability | How much money the movie made relative to its total cost over its entire run | Millions |
 | OpenProfit | Profit earned only during the opening weekend | Millions |
-| Year | The year when the movie is produced | Year ≥ 2007 |
+| Year | The year when the movie is produced | 2007 \- 2013 |
 | BOAvgWeekend(M) | The modified version for BOAvgWeekend, changing the units from dollars to millions | Millions |
 
 
