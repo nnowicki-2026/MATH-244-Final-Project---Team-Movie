@@ -61,7 +61,5 @@ We performed the beginning of our data wrangling in Excel. First we had to make 
 
 
 
-
-
 # Data Visualization
 
