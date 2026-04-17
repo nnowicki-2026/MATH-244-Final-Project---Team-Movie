@@ -1,3 +1,1 @@
 # #MATH-244-Final-Project---Team-Movie
-# Summary:
-For our dataset group project, we plan to focus on analyzing the characteristics of successful Hollywood movies and the intercorrelated variables that are useful in making predictions of the likelihood of a movie gaining popularity. Some of the variables we could analyze are the movie gross profit, budget, genre, rotten tomatoes/audience scores, profitability, or lead studio. We could also dive deeper into some extended questions, such as the domestic and foreign popularity of a movie, and investigate whether there are any particular genres that are more popular for audiences abroad. 
