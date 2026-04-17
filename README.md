@@ -15,6 +15,26 @@ We performed the beginning of our data wrangling in Excel. First we had to make 
 # Codebook
 
 
+| Variable | Description | Units |
+| :---- | :---- | :---- |
+| Movie | Movie name |  |
+| LeadStudio | Movie production company name |  |
+| RottenTomatoes | The Rotten Tomatoes website's ratings of movies |  |
+| AudienceScore | Scoring for the movie by the audience |  |
+| Story | The type of story the movie is about  |  |
+| Genre | Movie categories |  |
+| TheatersOpenWeek | Count of the number of theaters showing the movie for the open week | Counts of the weeks |
+| OpeningWeekend | Total box office revenue earned during the opening weekend | Millions |
+| BOAvgWeekend | The average box office revenue per theater during the opening weekend | Dollars |
+| DomesticGross | Revenues made in domestic regions | Millions |
+| ForeignGross | Revenues made in foreign regions | Millions |
+| WorldGross | The total revenue | Millions |
+| Budget | Amount of money spent on movie production | Millions |
+| Profitability | How much money the movie made relative to its total cost over its entire run | Millions |
+| OpenProfit | Profit earned only during the opening weekend | Millions |
+| Year | The year when the movie is produced | Year ≥ 2007 |
+| BOAvgWeekend(M) | The modified version for BOAvgWeekend, changing the units from dollars to millions | Millions |
+
 
 
 
