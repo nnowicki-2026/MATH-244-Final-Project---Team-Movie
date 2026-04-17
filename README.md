@@ -63,3 +63,19 @@ We performed the beginning of our data wrangling in Excel. First we had to make 
 
 # Data Visualization
 
+Movie Profitability vs. Worldwide Gross: The scatter plot coded below visualizes world gross and profitability with genre as the points. We selected this range for removing extreme outliers, and only the top 5 genres of movies are included. All of the regression lines based on different genres have a positive slope, which indicates that as world gross increases, profitability tends to increase. For the regression lines with steeper slopes, we can conclude that compared to movies of other genres, the success of this type of movie is defined more by its profitability. Whereas for the regression lines with less steep slopes, we can conclude that compared to movies of other genres, the success of this type of movie is defined more by its world gross.
+
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/0bdfd399-37ac-43da-a156-12087d1077c1" />
+
+Audience Score vs. Worldwide Gross: This faceted scatterplot examines the relationship between Audience Score and Worldwide Gross separately for each movie genre. Across all genres, Audience Scores cluster roughly between 20% and 80–90% . Very few movies score below 20% or above 90%, regardless of genre. Action and Animation show a positive trend between higher Audience Scores and higher Worldwide Gross, though with considerable scatter. Comedy exhibits a weaker, flatter relationship, indicating audience approval is less predictive of box office success for that genre. Drama and Horror have the smallest gross ranges, clustering tightly at lower values regardless of Audience Score. By comparing the faceting plots, we can find distinct genre-specific patterns that would otherwise be hidden in a single aggregate plot.
+
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/5b26d70d-dfa5-4dac-be44-9a8d5bb3c5c3" />
+
+Profitability vs. Budget: The below graph is a scatter plot depicted the relationship between profitability and budget. Looking at this visualization, most movies in the dataset appear to have budgets between 0 and 100 million and most of those points have profitability between 0 and 1000 million. Also based on the graph, movies that have a budget greater than 100 million tend to have profitabilities lower than 1000 million. The movies that have profitabilities greater than 1000 million have budgets that are less than 100 million. We added a line of best fit to this graph, as well as calculated its regression. The line of best fit showed a weak linear relationship between profitability and budget. This relationship is likely effected by the difference in scale between the axis and the outliers with very high profitabilities. However, we did find a p-value of 0.0008573 which means that the relationship between profitability and world gross is statistically significant.
+
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/3eb9666c-9027-4768-8412-1ef61a817194" />
+
+Number of Theaters Showing Movie vs. Opening Weekend Revenue: This scatter plot is depicting the relationship between how many theaters a movie was played in on opening weekend, and how much revenue it made. We added a line of best fit, and found that that is a moderately strong positive relationship. We also calculated the p-value and found it is statistically significant at < 2.2e-16. Based on this visualization we can conclude from the positive correlation that an increase in the number of theaters a movie is played in will lead to an increase in revenue on opening weekend.
+
+<img width="546" height="394" alt="Screen Shot 2026-04-17 at 18 27 58" src="https://github.com/user-attachments/assets/5d74e6c5-a721-47c1-91ae-6c84209ca8e4" />
+
