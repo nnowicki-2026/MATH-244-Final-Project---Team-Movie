@@ -1,1 +1,9 @@
 # #MATH-244-Final-Project---Team-Movie
+# Exploratory Data Analysis
+
+Research Question: What factors contribute to a successful movie?
+Success will be defined by the profitability and gross of the movie. 
+
+Our outcome variable is going to be Profitability and WorldGross. High profitability will indicate that the movie made a lot of money with a small budget, and gross measures how much money the movie made in total. We are interested in measuring what factors contribute to a successful movie, and because profitability is a measure of (WorldGross Budget)100, it will be able to explain how many times over the budget a movie earned in total revenue. This way, we can evaluate whether the budget of a movie is directly related to how much money it will make, and investigate the features of the highly profitable movies that are low-budget and high-return. When the profitability is above 100, it represents that the movie is making a profit. If not, then the movie suffered losses. From our dataset, we originally expected the movies with very high profitability to be the world-famous movies. However, we discovered that most of the movies with extremely high profitability are less well-known movies with extremely low budgets. For instance, there is a movie named Fireproof with a profitability of 6694.40, but this is due to its low budget of only 0.5 million dollars.
+
+The explanatory variables will be TheatersOpenWeek, OpeningWeekend, BOAvgOpenWeekend, and Budget. TheatersOpenWeek measures how many theaters showed the movie during the open weekend. OpeningWeekend measures the performance of the movie in the first weekend. BOAvgOpenWeekend measures the average revenue per theater during the open weekend. 
