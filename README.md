@@ -39,25 +39,25 @@ We performed the beginning of our data wrangling in Excel. First we had to make 
 # Table of Summary Statistics
 
 
-| Variable | Minimum | Median | Mean | Maximum |  |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| Movie |  |  |  |  |  |
-| LeadStudio |  |  |  |  |  |
-| Rotten Tomatoes | 0 | 48 | 49.55 | 99 |  |
-| AudienceScore | 19 | 61 | 60.68 | 96 |  |
-| Story |  |  |  |  |  |
-| Genre |  |  |  |  |  |
-| Theaters OpenWeek | 2 | 2875 | 2729 | 4468 |  |
-| Opening Weekend | 0.032 | 14.8 | 23.184 | 174.14 |  |
-| BOAvg Weekend | 151 | 5947 | 8134 | 93230 |  |
-| Domestic Gross | 0.36 | 44.67 | 74.91 | 760.5 |  |
-| ForeignGross | 0.01 | 46.93 | 99.96 | 2021 |  |
-| WorldGross | 1.52 | 91.4 | 174.74 | 2781.5 |  |
-| Budget | 0.5 | 39 | 57.57 | 300 |  |
-| Profitability | 15.25 | 254.32 | 371.73 | 6694.4 |  |
-| OpenProfit | 0.34 | 36.9 | 59.65 | 1368 |  |
-| Year | 2007 | 2009 | 2009 | 2013 |  |
-| BOAvg Weekend(M) | 0.0001504 | 0.0059195 | 0.0081153 | 0.0925000 |  |
+| Variable | Minimum | Median | Mean | Maximum |
+| :---- | :---- | :---- | :---- | :---- |
+| Movie |  |  |  |  |
+| LeadStudio |  |  |  |  |
+| Rotten Tomatoes | 0 | 48 | 49.55 | 99 |
+| AudienceScore | 19 | 61 | 60.68 | 96 |
+| Story |  |  |  |  |
+| Genre |  |  |  |  |
+| Theaters OpenWeek | 2 | 2875 | 2729 | 4468 |
+| Opening Weekend | 0.032 | 14.8 | 23.184 | 174.14 |
+| BOAvg Weekend | 151 | 5947 | 8134 | 93230 |
+| Domestic Gross | 0.36 | 44.67 | 74.91 | 760.5 |
+| ForeignGross | 0.01 | 46.93 | 99.96 | 2021 |
+| WorldGross | 1.52 | 91.4 | 174.74 | 2781.5 |
+| Budget | 0.5 | 39 | 57.57 | 300 |
+| Profitability | 15.25 | 254.32 | 371.73 | 6694.4 |
+| OpenProfit | 0.34 | 36.9 | 59.65 | 1368 |
+| Year | 2007 | 2009 | 2009 | 2013 |
+| BOAvg Weekend(M) | 0.0001504 | 0.0059195 | 0.0081153 | 0.0925000 |
 
 
 
