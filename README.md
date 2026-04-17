@@ -77,5 +77,6 @@ Profitability vs. Budget: The below graph is a scatter plot depicted the relatio
 
 Number of Theaters Showing Movie vs. Opening Weekend Revenue: This scatter plot is depicting the relationship between how many theaters a movie was played in on opening weekend, and how much revenue it made. We added a line of best fit, and found that that is a moderately strong positive relationship. We also calculated the p-value and found it is statistically significant at < 2.2e-16. Based on this visualization we can conclude from the positive correlation that an increase in the number of theaters a movie is played in will lead to an increase in revenue on opening weekend.
 
-<img width="546" height="394" alt="Screen Shot 2026-04-17 at 18 27 58" src="https://github.com/user-attachments/assets/5d74e6c5-a721-47c1-91ae-6c84209ca8e4" />
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/2eaa602e-4ab9-4275-be2b-0f59e46ac58a" />
+
 
