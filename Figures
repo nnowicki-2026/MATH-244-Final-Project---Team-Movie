@@ -1,1 +1,112 @@
+library(dplyr)
+library(tidyverse)
+
+movies <- read.csv("HollywoodMovies.csv")
+movies <- movies %>%
+  mutate(BOAvgOpenWeekend = BOAvgOpenWeekend / 1000000)
+
+movies <- movies %>% 
+  drop_na()
+
+movies <- movies %>% 
+  mutate(across(where(is.character), ~ na_if(., ""))) %>% 
+  drop_na()
+
+movies_filtered <- movies %>%
+  filter(Profitability <= 2000, WorldGross <= 1000) 
+#filter out profitability <= 2000, and worldgross <= 1000 in order to remove extreme outliers
+
+top5_genres <- movies_filtered %>%
+  count(Genre, sort = TRUE) %>%  # Count occurrences of each genre
+  slice_max(n, n = 5) %>%         # Take top 5
+  pull(Genre)                     
+
+# Filter data to only include top 5 genres
+movies_top5 <- movies_filtered %>%
+  filter(Genre %in% top5_genres)
+
+
+ggplot(data = movies_top5, aes(x = WorldGross, y = Profitability, color = Genre)) + geom_point() + geom_smooth(method = "lm", se = FALSE) + labs(
+    title = "Movie Profitability vs Worldwide Gross Revenue",
+    x = "Worldwide Gross Revenue (in millions $)",
+    y = "Profitability (Return on Investment)",
+    color = "Film Genre"
+  ) 
+
+ggplot(data = movies_top5, aes(x = AudienceScore, y = WorldGross, color = Genre)) + geom_point() + geom_smooth(method = "lm", se = FALSE) + facet_wrap(~ Genre, scales = "free", ncol = 3) + labs(
+    title = "Audience Score vs. Worldwide Gross",
+    x = "Audience Score (%)",
+    y = "Worldwide Gross ($ Millions)"
+  ) + theme_minimal()
+
+In the first scatterplot between world gross and profitability, we plotted the two outcome variables together. We fitted regression lines for the top five genres based on size, then compared the slopes of the regression lines. The slope of each regression line shows the tendency of how much world gross and profitability affect the total success, which, when the slope is tilted more towards the axis for world gross, then the world gross will contribute more in measuring the final success of the movie, and vice versa. In the faceted scatterplot based on genre, we intentionally sorted the data points out into discrete graphs to see the internal distribution within each genre. This is beneficial for detecting new patterns because it prevents the data points from smaller genres with smaller worldwide gross scale from being clustered together at the bottom left corner. Then, we can compare the slope of the linear regression within each genre and detect that the action movies have the largest slope and largest gross scale, indicating that with the same audience score, action movies in general can make more money compared to other genres of movies. Showing a possible preference for action movies by the audience. 
+
+
+critic_review <- pivot_longer(movies, 
+                        cols = c(AudienceScore, RottenTomatoes),
+                        names_to = "group",
+                        values_to = "value")
+
+ggplot(data = critic_review,
+       mapping = aes(x = group, y = value, fill = group)) +
+  geom_boxplot() +
+  labs(title = "Distribution of World Gross by Rotten Tomatoes and Audience Scores",
+       x = "Critic Scores (percent)", 
+       y = "World Gross (million)") +
+  theme_minimal()
+
+ggplot(data = movies,
+       mapping = aes(x = TheatersOpenWeek, y = OpeningWeekend)) +
+  geom_point() +
+  geom_smooth(method = "glm", 
+              formula = y ~ x,
+              method.args = list(family = gaussian(link = "log")),
+              color = "red", se = FALSE) +
+  labs(title = "Number of Theaters Showing Movie vs. Opening Weekend Revenue",
+       x = "Number of Theaters Showing Movie",
+       y = "Opening Weekend Revenue (in millions $)") +
+  theme_minimal()
+
+
+From the side-by-side box plot of Rotten Tomatoes and audience score we saw that the Rotten Tomatoes plot had a larger range and IQR, meaning there was more variability in those scores. We also saw in that graph that the median of audience score was associated with a higher world gross than the median of Rotten Tomatoes. In the scatter plot we made for the number of theaters showing a movie on opening weekend and the revenue the movie made during opening weekend, we saw an exponential relationship and fit the graph with an exponential line. There appeared to be a moderately strong relationship between the variables, suggesting a relationship between the number of theaters showing a movie and the revenue it makes on opening weekend. That relationship makes sense, the more theaters a movie is showing in on opening weekend gives that movie more of an opportunity to earn revenue. 
+
+
+budget_data <- data.frame(Budget = movies$Budget)
+
+set.seed(123)
+kmeans_result <- kmeans(budget_data, centers = 5)
+kmeans_result$centers
+
+movies$Cluster <- as.factor(kmeans_result$cluster)
+
+budget_ranges <- movies %>%
+  group_by(Cluster) %>%
+  summarise(
+    Count = n(),
+    Min_Budget = min(Budget, na.rm = TRUE),
+    Max_Budget = max(Budget, na.rm = TRUE),
+    Mean_Budget = mean(Budget, na.rm = TRUE),
+    Budget_Range = paste("$", round(Min_Budget, 0), "-", round(Max_Budget, 0))
+  )
+
+print(budget_ranges)
+print(kmeans_result$centers)
+
+cluster_means <- movies %>%
+  group_by(Cluster) %>%
+  summarise(mean_opening = mean(OpeningWeekend, na.rm = TRUE)) %>%
+  arrange(mean_opening)
+
+
+movies$Cluster <- factor(movies$Cluster, 
+                         levels = cluster_means$Cluster[order(cluster_means$mean_opening)])
+
+ggplot(data = movies, aes(x = Cluster, y = WorldGross, fill = Cluster)) +
+  geom_boxplot() + labs(title = "Opening Weekend Distribution by Budget Cluster",
+       x = "Budget Cluster",
+       y = "Opening Weekend Gross (in millions $)") +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 4, color = "red") 
+
+From our clustering analysis, we were able to find that a larger budget is more likely to gain a higher world gross, and that it is very unlikely to gain a high world gross with a small budget. The mean for each budget group is discrete and shows distributions supporting the conclusion. Across all the clusters, there is a common trend that the mean of each group is greater than the median. This can be due to the outliers with great values within each group, and influencing the less robust mean. For each group, there are indeed outliers of gaining large world gross compared to their budget range, but the gross is still relatively low when compared to movies from larger budget groups.
+
 
