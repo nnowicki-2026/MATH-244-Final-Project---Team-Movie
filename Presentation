@@ -1,1 +1,22 @@
+---
+title: "The Analysis of Successful Movies"
+subtitle: "Team Movie: Chunyi Quan, Nora Nowicki"
+execute:
+  echo: true
+format:
+  revealjs:
+    theme: default 
+    footnote: "244 Final Presentation"
+editor: 
+  markdown: 
+    wrap: 72
+engine: knitr
+---
+
+## Why Movies
+
+-   Mainstream form of entertainment
+-   Familiar topic to the audience
+-   We both become nearsighted because we watch too many movies
+
 
