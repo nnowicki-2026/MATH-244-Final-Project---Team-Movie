@@ -74,19 +74,24 @@ We also chose to use a multilinear regression model to analyze several of our va
 
 In the first scatterplot between world gross and profitability, we plotted the two outcome variables together. We fitted regression lines for the top five genres based on size, then compared the slopes of the regression lines. The slope of each regression line shows the tendency of how much world gross and profitability affect the total success, which, when the slope is tilted more towards the axis for world gross, then the world gross will contribute more in measuring the final success of the movie, and vice versa. In the faceted scatterplot based on genre, we intentionally sorted the data points out into discrete graphs to see the internal distribution within each genre. This is beneficial for detecting new patterns because it prevents the data points from smaller genres with smaller worldwide gross scale from being clustered together at the bottom left corner. Then, we can compare the slope of the linear regression within each genre and detect that the action movies have the largest slope and largest gross scale, indicating that with the same audience score, action movies in general can make more money compared to other genres of movies. Showing a possible preference for action movies by the audience. 
 
+
 <img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/a24fafaa-fc62-4b91-97e7-eaf0f2b9bcf3" />
+
 
 <img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/9ff394f3-8868-4d82-9cae-3d23117b4ddb" />
 
 
 From the side-by-side box plot of Rotten Tomatoes and audience score we saw that the Rotten Tomatoes plot had a larger range and IQR, meaning there was more variability in those scores. We also saw in that graph that the median of audience score was associated with a higher world gross than the median of Rotten Tomatoes. In the scatter plot we made for the number of theaters showing a movie on opening weekend and the revenue the movie made during opening weekend, we saw an exponential relationship and fit the graph with an exponential line. There appeared to be a moderately strong relationship between the variables, suggesting a relationship between the number of theaters showing a movie and the revenue it makes on opening weekend. That relationship makes sense, the more theaters a movie is showing in on opening weekend gives that movie more of an opportunity to earn revenue. 
 
+
 <img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/8836291c-1a5f-4dcf-b422-08095ebbf6c6" />
+
 
 <img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/22c786e9-04e0-4055-a4b5-f8b9769ffad6" />
 
 
 From our clustering analysis, we were able to find that a larger budget is more likely to gain a higher world gross, and that it is very unlikely to gain a high world gross with a small budget. The mean for each budget group is discrete and shows distributions supporting the conclusion. Across all the clusters, there is a common trend that the mean of each group is greater than the median. This can be due to the outliers with great values within each group, and influencing the less robust mean. For each group, there are indeed outliers of gaining large world gross compared to their budget range, but the gross is still relatively low when compared to movies from larger budget groups.
+
 
 <img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/9929edd5-d64d-4e5f-bb19-e5a255e54e38" />
 
